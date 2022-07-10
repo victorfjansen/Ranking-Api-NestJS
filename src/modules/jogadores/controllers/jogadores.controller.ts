@@ -9,11 +9,11 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
+import { ParameterValidator } from 'src/shared';
 
 import { CriarJogadorDto, Jogador } from '../models';
 import { updatePlayer } from '../models/dtos/updatePlayer.dto';
 import { JogadoresService } from '../services';
-import { ParameterValidator } from '../validators';
 
 @Controller('api/vi/jogadores')
 export class JogadoresController {
