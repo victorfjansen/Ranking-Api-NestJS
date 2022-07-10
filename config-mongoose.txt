@@ -1,0 +1,4 @@
+VCF09Arf7xTaD18y
+victorfjansen
+
+mongodb+srv://victorfjansen:<password>@cluster0.snhhehv.mongodb.net/?retryWrites=true&w=majority
