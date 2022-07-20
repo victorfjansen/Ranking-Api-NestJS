@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { ParameterValidator } from 'src/shared';
 
-import { Category, CreateCategoryDto, UpdateCategory } from '../models';
+import { Category, CreateCategoryDto, UpdateCategoryDto } from '../models';
 import { CategoryService } from '../service';
 
 @Controller('api/v1/categories')
@@ -40,12 +40,17 @@ export class CategoryController {
   @Put('/:category')
   @UsePipes(ValidationPipe)
   async updateCategory(
-    @Body() updateData: UpdateCategory,
+    @Body() updateData: UpdateCategoryDto,
     @Param('category', ParameterValidator) category: string,
   ): Promise<Category> {
     return await this.categoryService.updateCategoryByName(
       category,
       updateData,
     );
+  }
+
+  @Post('/:categoria/jogadores/:idJogador')
+  async assignCategoryForPlayer(@Param() params: string[]): Promise<Category> {
+    return await this.categoryService.assingCategoryForPlayer(params);
   }
 }

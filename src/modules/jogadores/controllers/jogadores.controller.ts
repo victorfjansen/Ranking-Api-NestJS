@@ -15,7 +15,7 @@ import { CriarJogadorDto, Jogador } from '../models';
 import { updatePlayer } from '../models/dtos/updatePlayer.dto';
 import { JogadoresService } from '../services';
 
-@Controller('api/vi/jogadores')
+@Controller('api/v1/jogadores')
 export class JogadoresController {
   constructor(private jogadoresService: JogadoresService) {}
 
