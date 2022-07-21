@@ -17,6 +17,8 @@ export class CategoryService {
     return await this.categoryModel.findOne({ category }).exec();
   }
 
+  //console.log('test')
+
   async createCategory(categoryData: CreateCategoryDto): Promise<Category> {
     const { category } = categoryData;
     const foundCategory = await this.findCategory(category);
